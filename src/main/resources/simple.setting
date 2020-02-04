@@ -1,8 +1,12 @@
 [system]
-
+# 文件变动检测频率 单位ms
 interval=3000
 
 [ftp]
+# 此处为ftp配置 可以配置多组供folder配置使用
+# id,ip,port,name,password为key 加上相同后缀为一组数据
+# 可以为 idxx=;ipxx=;portxx=;namexx=;passwordxx=;
+# demo数据中的1没有特定意义,id的值供folder调用
 
 id1=1
 ip1=127.0.0.1
@@ -10,18 +14,32 @@ port1=21
 name1=root
 password1=root
 
+# 主键ID在FTP下不可冲虚
 id2=2
+# FTP IP
 ip2=192.168.0.1
+# FTP端口 默认21
 port2=22
+# FTP用户名
 name2=root
+# FTP 密码
 password2=root
+# 是否为FTP,默认为true,当需要连接SFTP时此项需要为false
 isFtp2=false
 
 
 [folder]
 
+# 此处为folder配置 可以配置多组,注意目录的斜杠需与demo保持一致
+# 此处规则同ftp配置
+
+# 主键ID在Folder下不可重复
 id1=1
+# ftp配置的ID 错误配置导致无法同步
 ftpId1=2
+# 程序启动的电脑目录
 localPath1=D:/test/
+# ftp的目录
 ftpPath1=/mnt/test/
+# 程序启动时是否同步,默认为false,此配置仅能把本地文件同步至ftp,删除ftp目录下所有文件,把本地目录下所有文件上传
 startSyn1=true

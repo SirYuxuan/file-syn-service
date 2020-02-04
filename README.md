@@ -4,21 +4,50 @@
 文件同步服务
 可以将本地的文件通过配置实时同步到FTP,SFTP等
 
+#####当前版本0.0.1
+#####仅能实现从Window同步至FTP或SFTP
+#####从Linux同步至FTP或SFTP
+#####使用场景
+#####1.两台服务器目录需要实时同步的
+#####2.开发环境的页面需要实时同步至测试环境
+#####3.文件备份...等更多应用等你发掘
+
+
+
 #### 软件架构
-软件架构说明
-
-
+#### 第三方类库说明
+#####1.Hutool  
+#####2.Jsch
+#####3.commons-io
+#####4.commons-net
+#####5.lombok
+#####6.slf4j
 #### 安装教程
  
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
+1.  下载项目
+```shell script
+git clone https://gitee.com/siryuxuan/FileSynService.git
+```
+2.  进入目录并编译
+```shell script
+cd FileSynService
+mvn clean package
+```
+3.  运行程序
+```shell script
+java -jar fileSynService-jar-with-dependencies.jar -c D:/simple.setting
+```
+4. 后台执行
+```shell script
+Linux
+nohup java -jar fileSynService-jar-with-dependencies.jar -c D:/simple.setting > cataline.log 2>&1 &
+Window
+start javaw -jar fileSynService-jar-with-dependencies.jar -c D:/simple.setting
+```
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+##### 参考resource下的simple.setting文件 文件内有详细注释
+
 
 #### 参与贡献
 
@@ -27,12 +56,3 @@
 3.  提交代码
 4.  新建 Pull Request
 
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

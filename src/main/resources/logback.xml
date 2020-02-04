@@ -21,7 +21,7 @@
 		<rollingPolicy
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!--日志文件输出的文件名 -->
-			<FileNamePattern>${LOG_HOME}/dms-log.%d{yyyy-MM-dd}.log
+			<FileNamePattern>${LOG_HOME}/fileSynService-log.%d{yyyy-MM-dd}.log
 			</FileNamePattern>
 			<!--日志文件保留天数 -->
 			<MaxHistory>30</MaxHistory>
@@ -51,7 +51,7 @@
 			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- 按天回滚 daily -->
 			<!-- log.dir 在maven profile里配置 -->
-			<FileNamePattern>${LOG_HOME}/dms-error-log.%d{yyyy-MM-dd}.log
+			<FileNamePattern>${LOG_HOME}/fileSynService-error-log.%d{yyyy-MM-dd}.log
 			</FileNamePattern>
 			<!-- 日志最大的历史 60天 -->
 			<maxHistory>60</maxHistory>
